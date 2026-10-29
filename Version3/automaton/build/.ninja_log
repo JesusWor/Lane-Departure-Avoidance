@@ -1,0 +1,5 @@
+# ninja log v7
+57	1289	8149544136005478	CMakeFiles/test_logic.dir/tests/test_logic.cpp.obj	6290efaef424974d
+1291	1521	8149544148345072	test_logic.exe	3c0d035c36413dc2
+52	5444	8149544135960040	CMakeFiles/lda_automaton.dir/src/main.cpp.obj	c5c2f0d1e33e990a
+5445	5662	8149544189888059	lda_automaton.exe	a6efe1495d70ee49

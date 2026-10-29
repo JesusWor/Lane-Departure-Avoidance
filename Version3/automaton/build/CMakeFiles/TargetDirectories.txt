@@ -1,0 +1,5 @@
+C:/Users/Sistemas/Documents/TECMO/Semestre 7/Codigos/Proyecto/Lane-Departure-Avoidance/Version3/automaton/build/CMakeFiles/lda_automaton.dir
+C:/Users/Sistemas/Documents/TECMO/Semestre 7/Codigos/Proyecto/Lane-Departure-Avoidance/Version3/automaton/build/CMakeFiles/test_logic.dir
+C:/Users/Sistemas/Documents/TECMO/Semestre 7/Codigos/Proyecto/Lane-Departure-Avoidance/Version3/automaton/build/CMakeFiles/test.dir
+C:/Users/Sistemas/Documents/TECMO/Semestre 7/Codigos/Proyecto/Lane-Departure-Avoidance/Version3/automaton/build/CMakeFiles/edit_cache.dir
+C:/Users/Sistemas/Documents/TECMO/Semestre 7/Codigos/Proyecto/Lane-Departure-Avoidance/Version3/automaton/build/CMakeFiles/rebuild_cache.dir
