@@ -2,4 +2,6 @@ pyzmq
 numpy
 opencv-python
 # CARLA: pip install carla==<misma version que tu servidor>   (o el .egg/.whl de PythonAPI/carla/dist)
-# YOLOPv2 (solo --mode yolop): torch, torchvision, scipy, pyyaml, requests, matplotlib, Pillow
+# YOLOPv2 (solo --mode yolop): torch, torchvision, scipy, pyyaml, requests, matplotlib, Pillow  
+mcap
+mcap-ros2-support

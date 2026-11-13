@@ -1,9 +1,6 @@
-"""Enlace ZeroMQ con el automata C++.
-
+"""
   Python --PUB 5555--> automata (SUB)      percepcion
   Python <--SUB 5556-- automata (PUB)      decision / comando
-
-Ambos lados usan CONFLATE: solo importa el ultimo mensaje.
 """
 import json
 import time

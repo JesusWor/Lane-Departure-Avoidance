@@ -1,19 +1,3 @@
-"""Puente CARLA <-> automata C++.
-
-  CARLA --(camara / ground truth)--> percepcion --PUB--> automata C++ --PUB--> steer --> CARLA
-
-Modos de percepcion:
-  gt     : carril y objetos del mapa/actores de CARLA (percepcion "perfecta"). Sirve para validar
-           el automata y el protocolo antes de depender de la red neuronal.
-  yolop  : camara RGB -> YOLOPv2 (carril + vehiculos) -> geometria monocular -> tracker.
-
-Longitudinal: un P simple mantiene --target-speed (el automata solo decide direccion y TRUE/FALSE).
-Cambio de carril: el sistema solo VALIDA (como en el documento); el resultado se dibuja sobre el ego.
-
-Ejemplo:
-  ./automaton/build/lda_automaton -v &
-  python run_carla.py --mode gt --request LEFT --request-at 8
-"""
 import argparse
 import math
 import queue

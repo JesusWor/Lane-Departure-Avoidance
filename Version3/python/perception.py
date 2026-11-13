@@ -1,8 +1,3 @@
-"""Percepcion por camara: mascara de carril -> (e_y, e_psi, ancho); cajas -> objetos en metros.
-
-Convencion de salida (la del automata): x adelante, y IZQUIERDA +, angulos CCW +.
-Supuestos: camara montada al centro, sin cabeceo, piso plano (igual que LDA-32 del notebook).
-"""
 import math
 import sys
 from dataclasses import dataclass
