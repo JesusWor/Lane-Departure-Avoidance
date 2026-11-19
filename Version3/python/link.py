@@ -1,6 +1,9 @@
-"""
+"""Enlace ZeroMQ con el automata C++.
+
   Python --PUB 5555--> automata (SUB)      percepcion
   Python <--SUB 5556-- automata (PUB)      decision / comando
+
+Ambos lados usan CONFLATE: solo importa el ultimo mensaje.
 """
 import json
 import time
@@ -42,12 +45,12 @@ class Link:
         return None  # timeout: el automata no respondio
 
 
-def make_msg(frame_id, lane, objects, request="NONE", ego_speed=None):
+def make_msg(frame_id, lane, objects, request="NONE", ego_speed=None, lane_obs=None, t_s=None):
     """lane: dict(valid, lateral_error_m, heading_error_rad, curvature_1pm, lane_width_m, confidence)
     objects: lista de dict(id, x_m, y_m, vx_rel_mps, length_m, valid, conf, source)
     Convencion: x adelante, y IZQUIERDA +, angulos CCW +.
     """
-    return {
+    msg = {
         "ts_ns": time.time_ns(),
         "frame_id": frame_id,
         "request": request,
@@ -55,3 +58,11 @@ def make_msg(frame_id, lane, objects, request="NONE", ego_speed=None):
         "lane": lane,
         "objects": objects,
     }
+    # Opcionales (activan la fusion de carril en el automata C++):
+    #   lane_obs = {"left": {c, m, n, rms} | None, "right": ...}  observaciones por linea (ver lane_obs.py)
+    #   t_s      = tiempo del sensor/simulacion en segundos (el 'hold' del carril se mide con este reloj)
+    if lane_obs is not None:
+        msg["lane_obs"] = lane_obs
+    if t_s is not None:
+        msg["t_s"] = float(t_s)
+    return msg
